@@ -64,9 +64,9 @@ inquirer
       name: "contributions",
     },
   ])
-  .then((response) => {
-    console.log(response);
-    fs.appendFile("response.js", JSON.stringify(response), (err) => {
+  .then((data) => {
+    console.log(data);
+    fs.appendFile("data.js", JSON.stringify(data), (err) => {
       if (err) {
         console.log(err);
       } else {
