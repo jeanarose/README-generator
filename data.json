@@ -1,0 +1,11 @@
+{
+  "gitHubUsername": "jeanarose",
+  "email": "jr.mathis608@gmail.com",
+  "title": "Test",
+  "description": "This is a test",
+  "license": "MIT",
+  "commandToInstallDependencies": "npm install",
+  "commandToRunTests": "npm run-tests",
+  "repositoryInfo": "It is a test",
+  "contributions": "No contributions at this time"
+}

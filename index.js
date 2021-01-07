@@ -56,7 +56,7 @@ inquirer
     {
       type: "input",
       message: questions[7],
-      name: "repoInformation",
+      name: "repositoryInfo",
     },
     {
       type: "input",
@@ -65,24 +65,19 @@ inquirer
     },
   ])
   .then((data) => {
-    console.log(data);
-    fs.appendFile("data.js", JSON.stringify(data), (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Successfully wrote user info to file.");
-      }
-    });
+    const filename = `${
+      data.title.toLowerCase().split(" ").join("") + "-README"
+    }.md`;
+    fs.writeFile(filename, "", (err) =>
+      err ? console.log(err) : console.log("Your README has been created!")
+    );
   });
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    
-}
+function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
 function init() {}
 
 // Function call to initialize app
 init();
-
