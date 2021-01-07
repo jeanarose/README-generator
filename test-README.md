@@ -1,7 +1,6 @@
 # test
   
 ## Description
-this is a test
 
 ## Table of Contents
 * [Installation](#installation)
@@ -13,13 +12,10 @@ this is a test
 ## Installation
 
 ## Usage
-it's a test
 
 ## Credits
-nothing
 
 ## License
 MIT
-
 ## Tests
   
