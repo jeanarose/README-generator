@@ -15,6 +15,54 @@ const questions = [
   "What does the user need to know about contributing to the repo?",
 ];
 
+  inquirer.prompt([
+    {
+      type: "input",
+      message: questions[0],
+      name: "gitHubUsername",
+    },
+    {
+        type: "input",
+        message: questions[1],
+        name: "email",
+      },
+    {
+        type: "input",
+        message: questions[2],
+        name: "projectName",
+    },
+    {
+        type: "input",
+        message: questions[3],
+        name: "description",
+    },
+    {
+        type: "input",
+        message: questions[4],
+        name: "license",
+    },
+    {
+        type: "input",
+        message: questions[5],
+        name: "commandToInstallDependencies",
+    },
+    {
+        type: "input",
+        message: questions[6],
+        name: "commandToRunTests",
+    },
+    {
+        type: "input",
+        message: questions[7],
+        name: "repoInformation",
+    },
+    {
+        type: "input",
+        message: questions[8],
+        name: "contributions",
+    },
+  ]);
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
