@@ -17,5 +17,6 @@
 ## Credits
 
 ## License
+Learn more about the MIT license here: https://opensource.org/licenses/MIT
 ## Tests
   
