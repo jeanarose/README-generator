@@ -939,7 +939,7 @@ ${data.description}
 * [Tests](#tests)
 
 ## Installation
-
+${data.installation}
 ## Usage
 ${data.usage}
 ## Credits
@@ -948,8 +948,10 @@ ${data.contributions}
 Copyright (c) ${data.year} ${data.userName}
 ${renderLicenseSection(data.license)} 
 ## Tests
+${data.tests}
 ## Questions
-
+If you have any questions, you can contact me at ${data.email}. 
+You can also view my GitHub profile at https://github.com/${data.gitHubUserName}.
   `
   );
 }
