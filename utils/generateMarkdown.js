@@ -1,14 +1,12 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === "") {
-    return "";
-  } else if (license === "MIT") {
-    return "[![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+  if (license === "MIT") {
+    return "[![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
   } else if (license === "Apache") {
-    return "[![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+    return "[![license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)";
   } else if (license === "GPL") {
-    return "[![license: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
+    return "[![license: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)";
   } else {
     return "";
   }
@@ -17,22 +15,21 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "") {
-    return "";
-  } else if (license === "MIT") {
-    return "(https://opensource.org/licenses/MIT)";
-  } else if (license === "Apache") {
-    return "(https://www.apache.org/licenses/LICENSE-2.0)";
-  } else if (license === "GPL") {
-    return "(https://www.gnu.org/licenses/gpl-3.0.en.html)";
+  if (license === "None") {
+    return ``;
+  } else {
+    return `\n* [License](#license)`;
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseSection(license, data) {
   if (license === "MIT") {
     return `
+## License
+Copyright (c) ${data.year} ${data.userName}
+
 MIT License
     
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,6 +51,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`;
   } else if (license === "Apache") {
     return `
+## License
+Copyright (c) ${data.year} ${data.userName}
+
 Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
@@ -255,6 +255,9 @@ See the License for the specific language governing permissions and
 limitations under the License.`;
   } else if (license === "GPL") {
     return `
+## License
+Copyright (c) ${data.year} ${data.userName}
+
 GNU AFFERO GENERAL PUBLIC LICENSE
 Version 3, 19 November 2007
 
@@ -916,7 +919,7 @@ if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
 <https://www.gnu.org/licenses/>.`;
   } else {
-    return "";
+    return ``;
   }
 }
 
@@ -926,14 +929,12 @@ function generateMarkdown(data) {
 
   return `# ${data.title}
 ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
-  
 ## Description
 ${data.description}
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
+* [Credits](#credits)${renderLicenseLink(data.license)}
 * [Tests](#tests)
 
 ## Installation
@@ -942,9 +943,7 @@ ${data.installation}
 ${data.usage}
 ## Credits
 ${data.contributions}
-## License
-Copyright (c) ${data.year} ${data.userName}
-${renderLicenseSection(data.license)} 
+${renderLicenseSection(data.license, data)} 
 ## Tests
 ${data.tests}
 ## Questions
