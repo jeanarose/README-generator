@@ -10,7 +10,7 @@ function renderLicenseBadge(license) {
   } else if (license === "GPL") {
     return "[![license: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
   } else {
-    return "Must choose MIT, Apache, or GPL license";
+    return "";
   }
 }
 
