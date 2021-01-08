@@ -924,9 +924,7 @@ For more information on this, and how to apply and follow the GNU AGPL, see
 function generateMarkdown(data) {
   renderLicenseBadge(data.license);
 
-  console.log("You accessed the generate markdown function!");
-  return (
-    `# ${data.title}
+  return `# ${data.title}
 ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
   
 ## Description
@@ -951,8 +949,9 @@ ${renderLicenseSection(data.license)}
 ${data.tests}
 ## Questions
 If you have any questions, you can contact me at ${data.email}. 
-You can also view my GitHub profile at https://github.com/${data.gitHubUserName}.
-  `
-  );
+You can also view my GitHub profile at https://github.com/${
+    data.gitHubUserName
+  }.
+  `;
 }
 module.exports = { generateMarkdown };

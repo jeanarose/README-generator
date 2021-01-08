@@ -2,7 +2,7 @@
 [![license: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
 ## Description
-README Generator is a command-line application designed to create a professional README that displays user input. When a user runs index.js using NodeJS, they are prompted with a series of input questions that account for the README content. When the user answers a question, the answer is displayed in the README in the corresponding section. 
+README Generator is a command-line application designed to create a professional README that displays user input. When a user runs index.js using NodeJS, they are prompted with a series of input questions that account for the README content. When the user answers a question, the answer is displayed in the README in the corresponding section. This application is useful for developers by quickly and easily generating a quality README for any project. 
 
 The following technologies were used to make README Generator function as expected:
 * Modules
@@ -12,6 +12,13 @@ The following technologies were used to make README Generator function as expect
 * The fs package
 * The Inquirer package 
 * Node JS
+
+## README Generator
+
+<kbd>![Screenshot of README Generator command line](./assets/images/README-command-line-screenshot.png)<kbd>
+
+![Screenshot of generated README](./assets/images/generated-README-screenshot.png)
+
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -26,6 +33,10 @@ The following technologies were used to make README Generator function as expect
 4. In your terminal, go into the directory that you want to host README Generator. 
 5. Use the command **git clone [insert SSH key URL]** and click **Enter** (*Requires Git*).## Usage
 This application can only be used on the command-line and is built for developer use only.
+
+## Usage
+README Generator can be used to quickly create the basic contents of a quality README. 
+
 ## Credits
 The following people contributed to the success of this application. You can view their GitHub profiles by clicking on their names:
 * [Jonathan Watson](https://github.com/jonathanjwatson)
