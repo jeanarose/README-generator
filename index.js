@@ -78,9 +78,9 @@ const promptUser = () => {
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {
+const init = () => {
   promptUser();
-}
+};
 
 // Function call to initialize app
 init();

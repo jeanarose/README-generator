@@ -31,7 +31,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if(license === "MIT"){
+  if (license === "MIT") {
     return `
 MIT License
     
@@ -52,7 +52,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`;
-  } else if(license === "Apache"){
+  } else if (license === "Apache") {
     return `
 Apache License
 Version 2.0, January 2004
@@ -253,7 +253,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.`;
-  } else if(license === "GPL"){
+  } else if (license === "GPL") {
     return `
 GNU AFFERO GENERAL PUBLIC LICENSE
 Version 3, 19 November 2007
@@ -915,8 +915,7 @@ You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
 <https://www.gnu.org/licenses/>.`;
-  }
-   else {
+  } else {
     return "";
   }
 }
@@ -928,32 +927,29 @@ function generateMarkdown(data) {
   console.log("You accessed the generate markdown function!");
   return (
     `# ${data.title}
-` +
-    renderLicenseBadge(data.license) + renderLicenseLink(data.license) + 
-    `
+${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
   
-## ${"Description"}
+## Description
 ${data.description}
-## ${"Table of Contents"}
-${"* [Installation](#installation)"}
-${"* [Usage](#usage)"}
-${"* [Credits](#credits)"}
-${"* [License](#license)"}
-${"* [Tests](#tests)"}
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Tests](#tests)
 
-## ${"Installation"}
+## Installation
 
-## ${"Usage"}
+## Usage
 ${data.usage}
-## ${"Credits"}
+## Credits
 ${data.contributions}
-## ${"License"}
-${"Copyright (c) " + data.year + " " + data.userName}
+## License
+Copyright (c) ${data.year} ${data.userName}
+${renderLicenseSection(data.license)} 
+## Tests
+## Questions
 
-` +
-    renderLicenseSection(data.license) +
-    `
-## ${"Tests"}
   `
   );
 }
