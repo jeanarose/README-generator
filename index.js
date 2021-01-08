@@ -6,66 +6,65 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
-  "What is your GitHub username?",
-  "What is your email address?",
-  "What is your project's name?",
-  "Please write a short description of your project.",
-  "What kind of license should your project have?",
-  "What command should be run to install dependencies?",
-  "What command should be run to run tests?",
-  "What does the user need to know about using this repo?",
-  "What does the user need to know about contributing to the repo?",
+  {
+    type: "input",
+    message: "What is your full name?",
+    name: "userName",
+  },
+  {
+    type: "input",
+    message: "What is your GitHub username?",
+    name: "gitHubUserName",
+  },
+  {
+    type: "input",
+    message: "What is the current year?",
+    name: "year",
+  },
+  {
+    type: "input",
+    message: "What is your email address?",
+    name: "email",
+  },
+  {
+    type: "input",
+    message: "What is your project's name?",
+    name: "title",
+  },
+  {
+    type: "input",
+    message: "Please write a short description of your project.",
+    name: "description",
+  },
+  {
+    type: "input",
+    message: "What kind of license should your project have?",
+    name: "license",
+  },
+  {
+    type: "input",
+    message: "How is your project installed?",
+    name: "installation",
+  },
+  {
+    type: "input",
+    message: "What does the user need to know about using this repo?",
+    name: "usage",
+  },
+  {
+    type: "input",
+    message: "What does the user need to know about contributing to the repo?",
+    name: "contributions",
+  },
+  {
+    type: "input",
+    message: "What tests would you like users to run for your app?",
+    name: "tests",
+  },
 ];
 
-inquirer
-  .prompt([
-    {
-      type: "input",
-      message: questions[0],
-      name: "gitHubUsername",
-    },
-    {
-      type: "input",
-      message: questions[1],
-      name: "email",
-    },
-    {
-      type: "input",
-      message: questions[2],
-      name: "title",
-    },
-    {
-      type: "input",
-      message: questions[3],
-      name: "description",
-    },
-    {
-      type: "input",
-      message: questions[4],
-      name: "license",
-    },
-    {
-      type: "input",
-      message: questions[5],
-      name: "commandToInstallDependencies",
-    },
-    {
-      type: "input",
-      message: questions[6],
-      name: "commandToRunTests",
-    },
-    {
-      type: "input",
-      message: questions[7],
-      name: "repositoryInfo",
-    },
-    {
-      type: "input",
-      message: questions[8],
-      name: "contributions",
-    },
-  ])
-  .then((data) => {
+const promptUser = () => {
+  inquirer.prompt([...questions]).then((data) => {
     const filename = `${
       data.title.toLowerCase().split(" ").join("") + "-README"
     }.md`;
@@ -73,12 +72,15 @@ inquirer
       err ? console.log(err) : console.log("Your README has been created!")
     );
   });
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  promptUser();
+}
 
 // Function call to initialize app
 init();
