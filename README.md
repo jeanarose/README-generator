@@ -44,6 +44,7 @@ The following people contributed to the success of this application. You can vie
 
 The following sites were used to find code to make Day Planner function properly:
 * [GitHub:](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba) Markdown for licenses
+* [Choose A License:](https://choosealicense.com/licenses/) Licenses for MIT, Apache, and GPL
 ## License
 Copyright (c) 2020 Jeana Rose Mathis
 
