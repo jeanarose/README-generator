@@ -3,6 +3,7 @@
   
 ## Description
 This is a sample description
+
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -43,4 +44,3 @@ No tests at this time
 ## Questions
 If you have any questions, you can contact me at jr.mathis608@gmail.com. 
 You can also view my GitHub profile at https://github.com/jeanarose.
-  
