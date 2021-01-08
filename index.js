@@ -40,9 +40,10 @@ inquirer
       name: "description",
     },
     {
-      type: "input",
+      type: "list",
       message: questions[4],
       name: "license",
+      choices: ["MIT", "Apache", "GPL"],
     },
     {
       type: "input",
