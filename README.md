@@ -13,6 +13,8 @@ The following technologies were used to make README Generator function as expect
 * The Inquirer package 
 * Node JS
 
+Watch this video walk-through to learn more about how to use README generator: https://drive.google.com/file/d/1Hy4FGFn5JZefVBTdNRSG6UoZcNTQhy3S/view
+
 ## README Generator
 
 <kbd>![Screenshot of README Generator command line](./assets/images/README-command-line-screenshot.png)<kbd>
