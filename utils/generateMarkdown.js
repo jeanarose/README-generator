@@ -942,7 +942,11 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## Credits
-${data.contributions}
+The following people contributed to the success of this application. You can view their GitHub profiles by clicking on their names:
+${data.contributors}
+
+The following sites were used to find code to make Weather Dashboard function properly:
+${data.resources}
 ${renderLicenseSection(data.license, data)} 
 ## Tests
 ${data.tests}

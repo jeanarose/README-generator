@@ -53,8 +53,13 @@ const questions = [
   },
   {
     type: "input",
-    message: "What does the user need to know about contributing to the repo?",
-    name: "contributions",
+    message: "What resources did you use for this application?",
+    name: "resources",
+  },
+  {
+    type: "input",
+    message: "Who contributed to the success of this application?",
+    name: "contributors",
   },
   {
     type: "input",
